@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "猜你喜欢",
+  "navigationBarBackgroundColor": "#63B8FF",
+  "backgroundColor": "#000000",
+  "enablePullDownRefresh": true
+}

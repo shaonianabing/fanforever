@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="header {{scrollDown?'hidden':''}}">
+    <image class="logo" src="{{shop.sShopimg}}" />
+    <view class="name ellipsis">{{shop.sName}}</view>
+    <view class="zt">
+      <image style="width: 54px;height: 32px;" src="{{shop.sState}}"></image>
+    </view>
+    <view class="welcome ellipsis">公告：{{shop.sNotice}}！</view>
+    <view class="line"></view>
+    <view class="desc">{{shop.sMsg}}</view>
+  </view>
+  <view class="content-container">
+    <scroll-view class="classify-container" scroll-y="true">
+      <view class="classify" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.flYwname}}" bindtap="tapClassify">
+        <view class="name">{{classify.flName}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+      <view wx:for="{{goods}}" class="goods" bindtap="tapAddCart" data-id="{{goods.goodsId}}" wx:for-item="goods" wx:key="flYwname" id="{{classify.flYwname}}">
+        <image class="pic" src="{{goods.goodsImg}}"></image>
+        <view class="name ellipsis">{{goods.goodsName}}</view>
+        <view class="sold">{{goods.goodsTaste}}</view>
+        <view class="price">￥{{goods.goodsPrice}}</view>
+        
+        <view class="reduceCart" bindtap="tapAddCart" data-id="{{id}}">
+          <image src="../../images/reduce.png"></image>
+        </view>
+        <view class="count">{{num}}</view>
+
+        <view class="addCart" data-id="{{goods.goodsPrice}}">
+          <image  src="../../images/plus.png"></image>
+        </view>
+        
+      </view>
+    </scroll-view>
+  </view>
+   <view class="cart">
+    <view class="data" bindtap="showCartDetail">
+      <view class="icon">
+        <image src="../../images/cart.png"></image>
+        <view class="count">{{cart.count}}</view>
+      </view>
+      <view class="total">￥{{cart.total}}</view>
+    </view>
+    <form bindsubmit="submit" report-submit="true">
+
+      <!--<view formType="submit" class="submit">去结算</view>-->
+      <button class="yellow {{cart.count?'':'disabled'}}" formType="submit" disabled="{{!cart.count}}">去结算</button>
+    </form>
+  </view>
+</view>

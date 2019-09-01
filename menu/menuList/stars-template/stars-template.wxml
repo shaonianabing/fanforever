@@ -1,0 +1,7 @@
+<!-- <template name="starsTemplate">
+<view class="stars-container">
+    <view class="stars">
+        <image src="{{item.goodsImg}}"></image>
+    </view>
+</view>
+</template> -->

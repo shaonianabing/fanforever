@@ -1,0 +1,143 @@
+/**index.wxss**/
+@font-face {font-family: 'webfont';
+    src: url('webfont.eot'); /* IE9*/
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('webfont.woff') format('woff'), /* chrome、firefox */
+    url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+
+
+page {
+  background-color: #efeff4;
+}
+
+swiper {
+  height: 300rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.flow {
+  padding: 30rpx 0;
+  background-color: #fff;
+}
+
+.flow image {
+  width: 100%;
+  height: 133rpx;
+  margin: 0rpx 0 30rpx;
+}
+
+.btn {
+  width: 90%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 8rpx;
+  margin: auto;
+  color: #000;
+  background-color: #ffda44;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn:active {
+  background-color: #d8b839;
+}
+
+.hotCon {
+ 
+  background-color: #fff;
+}
+
+.hot {
+  height: 325rpx;
+  font-size: 28rpx;
+}
+
+.hotTitle {
+  font-size: 28rpx;
+  color: #333;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.hot_l, .hot_r {
+  float: left;
+  width: 50%;
+  height: 325rpx;
+}
+
+.hot_l {
+  text-align: center;
+  border-right: 1rpx solid #e4e4e4;
+  background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561790442533&di=826e13569e415ea80e02e131aa670c12&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F393f8224f130711d6989c4fa68176811805d81652ca3-Z2pshB_fw658);
+  background-size:330rpx 350rpx;
+  font-size: 35rpx;
+}
+
+.hot_l image {
+  display: block;
+  width: 316rpx;
+  height: 279rpx;
+  margin: 0rpx auto;
+}
+
+.hot_r view {
+  height: 162rpx;
+  line-height: 162rpx;
+  background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3785246665,2919738023&fm=26&gp=0.jpg);
+}
+
+.hot_r1 {
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.hot_r view image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120rpx;
+  height: 120rpx;
+}
+.silde{
+    margin: 30rpx 0 60rpx;
+    background-color: #fff;    
+}
+.silde>view{
+    float: left;
+    width: 33.3%;
+    font-size: 28rpx;
+    text-align: center;
+    padding-bottom: 30rpx;
+}
+.silde>view:active{
+  background-color: #fafafa;
+}
+.imgCon{
+    z-index: -1;
+    position: relative;
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 100%;
+    background-color: #e4e4e4;
+    margin: 30rpx auto 20rpx;
+    padding-top: 20rpx;
+}
+.imgCon image{
+    position: relative;
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+    margin:  auto;
+}
+.b_r{
+    border-right: 1rpx solid #e4e4e4;
+}

@@ -1,0 +1,43 @@
+<!--pages/myContribute/myContribute.wxml-->
+<view class='myContribute'>
+  <view class='myContribute_tab'>
+    <view class='myContribute_tab_item {{activeIndex == 6 ?"active":""}}' data-index='6' bindtap='myContributeTab'>全部订单</view>
+    <view class='myContribute_tab_item {{activeIndex == 1 ?"active":""}}' data-index='1' bindtap='myContributeTab'>未支付</view>
+    <view class='myContribute_tab_item {{activeIndex == 4 ?"active":""}}' data-index='4' bindtap='myContributeTab'>已支付</view>
+  </view>
+    <scroll-view scroll-y="true"  bindscrolltolower="scrollLower">
+  <view class='myContribute_box'>
+      <block wx:for='{{list}}' wx:key=''>
+        <!-- 滑动删除 -->
+        <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.shows}}" class="list_del txt">
+
+          <view class='list_item' bindtap='jumpArticleDetails' data-article_id='{{item.goId}}'>
+            <view class='list_item_image'>
+              <image src='{{item.goodsImg}}'></image>
+            </view>
+            <view class='list_item_cont'>
+              <view class='list_item_cont_title'>{{item.goNumber}}</view>
+              <view class='list_item_cont_cont'>
+                {{item.goodsName}}
+              </view>
+              <view class='list_item_cont_foot'>
+                <view class='list_item_cont_foot_time'>
+                  <view class='list_item_cont_foot_time_txt'>{{item.goTime}}</view>
+                </view>
+                <view class='list_item_cont_foot_seeNum'>
+                  <image class='list_item_cont_foot_seeNum_img' src='../../images/qian.png'></image>
+                  <view class='list_item_cont_foot_seeNum_txt'>{{item.goPrice}}</view>
+                  
+                </view>
+              </view>
+            </view>
+                <view class='zf'>{{item.goState}}</view>
+          
+          </view>
+            <!-- 删除 -->
+            <view data-index="{{index}}" data-postid="{{item.goId}}" bindtap="delItem" class="list_del del">删除</view>
+        </view>
+      </block>
+  </view>
+  </scroll-view>
+</view>

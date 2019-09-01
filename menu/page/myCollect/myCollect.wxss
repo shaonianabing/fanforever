@@ -1,0 +1,21 @@
+/* pages/myCollect/myCollect.wxss */
+.list_item_cont_title{
+  vertical-align: middle;
+}
+.collect{
+  width: 44rpx;
+  height: 38rpx;
+  display: inline-block;
+  float: right;
+}
+.collect image{
+  width: 54rpx;
+  height: 38rpx;
+}
+.list_item_cont_title_cont{
+  display: inline-block;
+  width: 400rpx;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+}

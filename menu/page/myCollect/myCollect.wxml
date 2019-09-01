@@ -1,0 +1,36 @@
+<!--pages/myCollect/myCollect.wxml-->
+<view class='list'>
+  <block wx:for='{{list}}' wx:key=''>
+    <view class='list_box'>
+      <view class='list_touch' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="left:-{{offsetRecord.index == index ? offsetRecord.offset : 0}}px;" bindtap='jumpArticleDetails' data-article_id='{{item.goodsId}}'>
+        <view class='list_item'>
+          <view class='list_item_image'>
+            <image src='{{item.goodsImg}}'></image>
+          </view>
+          <view class='list_item_cont'>
+            <view class='list_item_cont_title'>
+              <view class='list_item_cont_title_cont'>{{item.goodsName}}</view>
+              <view class='collect' bindtap='collect'>
+                <!-- <block wx:if='{{collect == true}}'> -->
+                  <image src='../../images/wdsc.png' mode='aspectFit'></image>
+                <!-- </block>
+                <block wx:if='{{collect == false}}'>
+                  <image src='../../img/collect.png' mode='aspectFit'></image>
+                </block> -->
+              </view>
+            </view>
+            <view class='list_item_cont_cont'>
+             {{item.goodsTaste}}
+            </view>
+            <view class='list_item_cont_foot'>
+              <view class='list_item_cont_foot_seeNum'>
+                
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='delte-btn' data-index='{{index}}' data-article_id='{{item.cId}}' bindtap='deleteBtn'>删除</view>
+    </view>
+  </block>
+</view>

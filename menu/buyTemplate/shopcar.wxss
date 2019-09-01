@@ -1,0 +1,65 @@
+@import "../drawer/drawer.wxss" ;
+.footer{
+padding-bottom: 10px;
+position: fixed;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: #fff;
+}
+.footers{
+padding-bottom: 10px;
+position: fixed;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: #fff;
+}
+
+.footer-btn{
+display: flex;
+justify-content: space-around;
+}
+
+.footer-btn2,.footer-btn3{
+font-size: 28rpx;
+color: #666666;
+border: 2rpx solid #999999;
+border-radius: 8rpx;
+line-height: 44rpx;
+margin-top: 8px;
+padding:4px 4px;
+}
+
+.footer-btn1{
+font-size: 28rpx;
+line-height: 44rpx;
+margin-top: 8px;
+padding:4px 4px;
+}
+
+.footer-btn4{
+font-size: 28rpx;
+line-height: 44rpx;
+margin-top: 8px;
+padding:4px 4px;
+}
+
+.footer-btn1_img{
+    width: 64rpx;
+    height: 64rpx;
+}
+.text{
+    border-radius:35rpx;
+}
+.texts{
+    border-radius:35rpx;
+}
+.text_buy{
+    font-size:Microsoft Blod; 
+    margin-top: 11.5rpx;
+}
+.text_buys{
+    font-size:Microsoft Blod; 
+    margin-top: 11.5rpx;
+}

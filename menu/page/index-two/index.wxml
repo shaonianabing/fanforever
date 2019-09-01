@@ -1,0 +1,25 @@
+<template name="index-two">
+  <view class="hotCon">
+    <view class="hotTitle"></view>
+    <view class="hot clearfix">
+    <navigator url="../recommend/recommend">
+      <view class="hot_l" >
+        <image></image>
+        <text>今日推荐</text>
+      </view>
+    </navigator>
+      <view class="hot_r">
+        <navigator url="../lovely/lovely">
+          <view class="hot_r1">
+            <image></image>
+            <text >猜您喜欢</text>
+          </view>
+         </navigator>
+        <view  bindtap="dj">
+          <image></image>
+          <text>敬请期待</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

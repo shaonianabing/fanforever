@@ -1,0 +1,13 @@
+<import src="../../menuList/menuList-template.wxml" />
+<view class="c-minheight wx-view_TQ4nqD" data-c_e_id="wx_view878d6007" style="background-color:#fff;margin-top:3rpx;">
+     <scroll-view scroll-y="true"  bindscrolltolower="scrollLower">
+  <view class="list">
+    <block wx:for="{{classify}}" wx-for-item="item" wx-for-index="idx" wx:key="postId">
+      <view catchtap="menuTap" data-postid="{{item.goodsId}}">
+        <template is="menuListTemplate" data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+      </scroll-view>
+
+  <view class="c-minheight wx-view_tvMgwg" /></view>

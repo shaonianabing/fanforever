@@ -1,0 +1,64 @@
+/* pages/myContribute/myContribute.wxss */
+
+.myContribute {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.myContribute_tab {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.myContribute_tab_item {
+  flex: 1;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.myContribute_tab_item.active {
+  color: #31bf6c;
+}
+
+
+/* 删除外层包裹视图 */
+
+.list_del {
+  position: absolute;
+  top: 0;
+}
+ 
+.list_del.txt {
+  position: relative;
+  background-color: #fff;
+  width: 124%;
+  z-index: 5;
+  /* padding: 0 10rpx; */
+  transition: left 0.5s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 删除 */
+
+.list_del.del {
+  background-color: #e64340;
+  width: 180rpx;
+  height: 138rpx;
+  text-align: center;
+  z-index: 4;
+  right: 0;
+  color: #fff;
+  margin-top: 10px;
+  line-height: 130rpx
+}
+ .zf {
+  margin-left: -91rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+}

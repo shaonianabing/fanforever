@@ -1,0 +1,77 @@
+<!-- <import src="../../buyTemplate/pinglun/pinglun.wxml" /> -->
+<view class="sec-detail">
+  <view class="sec-outer">
+    <view class="wx-view_KHAWVZ" data-c_e_id="wx_viewb7dbd52e">
+      <swiper autoplay="True" class="wx-swiper_Mn3JMs">
+        <swiper-item class="c-full wx-swiper-item_F6vCx8" data-c_e_id="wx_swiper_item015a5cd2">
+          <image bindtap="tap_d5808da3" class="wx-image_HsAX8s2" src="{{item.goodsImg}}" />
+        </swiper-item>
+        <swiper-item class="c-full wx-swiper-item_qGeJVI" data-c_e_id="wx_swiper_item1d2f7146">
+          <image class="wx-image_HsAX8s2" src="{{item.goodsImg}}" />
+        </swiper-item>
+      </swiper>
+      <view>
+        <text class="c-block wx-text_V55JEt" data-c_e_id="wx_textbf43d609">{{item.goodsName}}     
+        </text>
+        <view bindtap="setcollection" id='{{item.goodsId}}' class="c-block wx-text_V55JEts">
+          <image style="width: 65rpx;height: 65rpx;" src="{{sc}}"></image>
+        </view>
+        <view class="c-block wx-text_V55JEtss">收藏</view>
+      </view>
+
+      <view class="likelist" data-c_e_id="wx_view_4cc0358a">
+        <view class="nav_likelistmore">
+          <text class="c-block wx-text_t7lDiK" data-c_e_id="wx_textfcc12486">10011010人吃过</text>
+          <view class="xuxian"></view>
+          <text class="c-block wx-text_t7lDiK2" data-c_e_id="wx_texted258fa6">❯</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 底部功能按钮 -->
+  <view class="footer" wx:if="{{shop==1}}">
+    <view class="footer-btn" style="display:flex;flex-direction: row;">
+      <!-- 点菜 -->
+      <view class="text" bindtap="powerDrawer" id='{{item.goodsId}}' data-statu="open" data-status="1">
+        <view class="text_buy">
+          <text>点  餐</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <block wx:else>
+    <view class="footer-btn footers" style="display:flex;flex-direction: row;">
+      <!-- 点菜 -->
+      <view class="texts" bindtap="setModalStatusZt" id='{{item.goodsId}}' data-status="1">
+        <view class="text_buys">
+          <text>点  餐</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" id='{{item.goodsId}}' data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+  <!--drawer content-->
+  <view class="drawer_title">根据您的口味选择配料</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="drawer_content">
+      <block wx:for="{{tllb}}" wx-for-item="item" wx-for-index="idx" wx:key="ctId">
+        <view class="top grid">
+          <label class="title col-0">
+            <text>{{item.ctName}}</text>
+          </label>
+          <input class="input_base input_h30 col-1" data-statu='{{item.ctValue}}' name="{{item.ctVariable}}" value="{{item.ctValue}}"></input>
+        </view>
+      </block>
+      <button class="btn_ok" form-type="submit" data-statu="que">确定点餐</button>
+  </view>
+  </form>
+</view>
